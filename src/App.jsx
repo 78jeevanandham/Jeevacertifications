@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Search, X, ShieldCheck, Award, Calendar, FolderOpen, Layers, Terminal, Cloud, Sun, Moon } from "lucide-react";
 
 export default function App() {
+  const year = new Date ().getFullYear();
   const certificates = [
     
     
@@ -9,7 +10,7 @@ export default function App() {
       id: 1,
       title: "Full Stack web Developer",
       issuer: "LinkedInLearning",
-      year: "2026",
+      year: "2025",
       category: "Frontend",
       driveId: "1SEY-A49jGP0WFiIZ782-xDSHnoqZeHKv",
     },
@@ -17,7 +18,7 @@ export default function App() {
       id: 2,
       title: "Full Stack Web Developer",
       issuer: "LinkedInLearning",
-      year: "2026",
+      year: "2025",
       category: "Full Stack",
       driveId: "1zp5__88hVeMdMAyIhlc758aKD-XYxbQw",
     },
@@ -25,7 +26,7 @@ export default function App() {
       id: 3,
       title: "Learning Office 2024",
       issuer: "LinkedInLearning",
-      year: "2026",
+      year: "2025",
       category: "office",
       driveId: "1S8YXRNUbNXcjVAjALcsLXua9DvIeywpd",
     },
@@ -33,7 +34,7 @@ export default function App() {
       id: 4,
       title: "Java Foundations Professional",
       issuer: "JETBRAINS",
-      year: "2026",
+      year: "2025",
       category: "Backend",
       driveId: "1ZsISfpcKIviMbj7Vbh20usU3Vtr7c61u",
     },
@@ -41,7 +42,7 @@ export default function App() {
       id: 5,
       title: "Java Essential Training",
       issuer: "LinkedInLearning",
-      year: "2026",
+      year: "2025",
       category: "Backend",
       driveId: "1_JVEXV8SjuYogj-QPsgcyb4p1lI1w9K_",
     },
@@ -49,7 +50,7 @@ export default function App() {
       id: 6,
       title: "Java Object-Oriented Programing",
       issuer: "LinkedInLearning",
-      year: "2026",
+      year: "2025",
       category: "Backend",
       driveId: "1_FfearprVbccsNtssljZyCTTkMGkqzKD",
     },
@@ -57,7 +58,7 @@ export default function App() {
       id: 7,
       title: "Learning JDBC",
       issuer: "LinkedInLearning",
-      year: "2026",
+      year: "2025",
       category: "Backend",
       driveId: "1_9cfTvU5nnbPep5f_-3sgAS-TQWwMupp",
     },
@@ -65,7 +66,7 @@ export default function App() {
       id: 8,
       title: "Java DataStructures",
       issuer: "LinkedInLearning",
-      year: "2026",
+      year: "2025",
       category: "Backend",
       driveId: "1_Fd0vELuOz1gEJI-xq2D2dkfj-r1Mq8_",
     },
@@ -73,7 +74,7 @@ export default function App() {
       id: 9,
       title: "Java Essential Training",
       issuer: "LinkedInLearning",
-      year: "2026",
+      year: "2025",
       category: "Backend",
       driveId: "1_ItwgBLtbQPM5JaTAhYG2DTQoeaNHDsC",
     },
@@ -81,7 +82,7 @@ export default function App() {
       id: 10,
       title: "Learning REST APIs",
       issuer: "LinkedInLearning",
-      year: "2026",
+      year: "2025",
       category: "Backend",
       driveId: "1mZUbEhvHw2ebvWosr8OobYBNO945Ck_7",
     },
@@ -89,7 +90,7 @@ export default function App() {
       id: 11,
       title: "CSS Essential Training",
       issuer: "LinkedInLearning",
-      year: "2026",
+      year: "2025",
       category: "Frontend",
       driveId: "1RRYC6cBNhItjcgdI6wBXq04oC-6dKiWi",
     },
@@ -117,7 +118,7 @@ export default function App() {
       case "Frontend": return <Layers size={14} className={darkMode ? "text-cyan-400" : "text-cyan-600"} />;
       case "Backend": return <Terminal size={14} className={darkMode ? "text-amber-400" : "text-amber-600"} />;
       
-      case "Full stack": return <Cloud size={14} className={darkMode ? "text-purple-400" : "text-purple-600"} />;
+      case "Full stack": return <folderbookmark size={14} className={darkMode ? "text-purple-400" : "text-purple-600"} />;
       default: return <FolderOpen size={14} className={darkMode ? "text-emerald-400" : "text-emerald-600"} />;
     }
   };
@@ -323,6 +324,14 @@ export default function App() {
           </div>
         </div>
       )}
+
+      <footer className={`p-3 rounded-2xl border flex flex-col md:flex-row gap-3 mx-auto justify-between shadow-sm mb-8 ${
+          darkMode ? "bg-slate-400/30 border-slate-800/60" : "bg-slate-200 border-slate-200"
+        }`}>
+            <div className="mx-auto">
+              <span className={`mx-auto font-custom font-bold ${darkMode ? "text-white" : "text-black"}`}>&#169; {year} JEEVANANDHAM | All rigths reserved</span>
+            </div>
+        </footer>
     </div>
   );
 }
