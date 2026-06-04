@@ -139,7 +139,7 @@ export default function App() {
       <div className="max-w-6xl mx-auto px-4 sm:px-8 relative w-full">
         
         {/* Stationary Theme Toggle Button (Aligned inside the side gaps layout) */}
-        <div className="absolute top-6 right-4 z-40">
+        <div className="fixed bottom-6 right-4 z-40">
           <button
             onClick={() => setDarkMode(!darkMode)}
             className={`p-3 rounded-xl shadow-md border transition-all hover:scale-105 active:scale-95 flex items-center justify-center ${
