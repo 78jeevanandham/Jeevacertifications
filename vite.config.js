@@ -1,7 +1,8 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/react-refresh' // or @vitejs/plugin-react
+import react from '@vitejs/plugin-react'
 
+// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: 'Jeevacertifications', // Add this exact line with the forward slashes
+  base: 'Jeevacertifications',
 })
